@@ -30,8 +30,6 @@ jobs:
       with:
         # Yarn command
         cmd: install # npm install/ yarn install
-    - name: npm install yarn
-      run: npm install -g yarn    
     - name: Creating build
       run: yarn build
     
@@ -39,4 +37,4 @@ jobs:
       run: npm install -g surge
     
     - name: deploying on surge
-      run: surge ./build http://giant_wood.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./build http://.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
